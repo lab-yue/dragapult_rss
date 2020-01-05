@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import './feed.dart' as feed;
 
 void main() => runApp(MaterialApp(
@@ -27,34 +28,46 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   Widget createRegionsListView(context, snapshot) {
     var values = snapshot.data;
     return ListView.builder(
       itemCount: values.length,
       itemBuilder: (BuildContext context, int index) {
         return values.isNotEmpty
-            ? Column(
-                children: <Widget>[
-                  if (values[index].title != null)
-                    ListTile(
-                      title: Text(values[index].title ?? ""),
-                    ),
-                  ListBody(
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
-                        child: Text(
-                          values[index].description,
-                          style: TextStyle(color: Colors.grey),
+            ? Material(
+                child: InkWell(
+                    onTap: () => _launchURL(values[index].link),
+                    child: Column(
+                      children: <Widget>[
+                        if (values[index].title != null)
+                          ListTile(
+                            title: Text(values[index].title ?? ""),
+                          ),
+                        ListBody(
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 20),
+                              child: Text(
+                                values[index].description,
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            )
+                          ],
                         ),
-                      )
-                    ],
-                  ),
-                  Divider(
-                    height: 2.0,
-                  ),
-                ],
-              )
+                        Divider(
+                          height: 2.0,
+                        ),
+                      ],
+                    )))
             : CircularProgressIndicator();
       },
     );

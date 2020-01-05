@@ -11,15 +11,14 @@ const List<String> feedList = [
 ];
 
 Future<List<FeedItem>> fetch() async {
-  //var res = await http.get(feedList[0]);
-  //var rssFeed = new RssFeed.parse(res.body);
-  var res = [dummy.vueFeed, dummy.coolSheelFeed];
-  var rssFeed = res.expand((f) => (new RssFeed.parse(f).items));
+  var res = await Future.wait(feedList.map((source) => http.get(source)));
+  //var res = [dummy.vueFeed, dummy.coolSheelFeed];
+  var rssFeed = res.expand((f) => (new RssFeed.parse(f.body).items));
   return rssFeed.map(formatRssItem).toList();
 }
 
 String formatRssItemText(String text) {
-  text = helper.removeAllHtmlTags(text);
+  text = helper.removeAllHtmlTags(text).replaceAll("\n", "");
   if (text.length > 140) {
     text = text.substring(0, 140);
   }
