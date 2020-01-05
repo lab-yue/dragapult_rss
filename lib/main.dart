@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:webfeed/webfeed.dart';
 import './feed.dart' as feed;
 
 void main() => runApp(MaterialApp(
@@ -29,15 +28,27 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   Widget createRegionsListView(context, snapshot) {
-    List<RssItem> values = snapshot.data;
+    var values = snapshot.data;
     return ListView.builder(
       itemCount: values.length,
       itemBuilder: (BuildContext context, int index) {
         return values.isNotEmpty
             ? Column(
                 children: <Widget>[
-                  ListTile(
-                    title: Text(values[index].description ?? "$index"),
+                  if (values[index].title != null)
+                    ListTile(
+                      title: Text(values[index].title ?? ""),
+                    ),
+                  ListBody(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Text(
+                          values[index].description,
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      )
+                    ],
                   ),
                   Divider(
                     height: 2.0,
