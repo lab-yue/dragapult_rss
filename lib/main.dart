@@ -29,16 +29,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Widget createRegionsListView(context, snapshot) {
-    var values = snapshot.data;
-    return values.isNotEmpty
-        ? ListView.builder(
-            itemCount: values.length,
-            itemBuilder: (BuildContext context, int index) {
-              return ItemView(values[index]);
-            },
-          )
-        : CircularProgressIndicator();
+  Future<List<feed.FeedItem>> _future;
+
+  initState() {
+    super.initState();
+    _future = feed.fetch();
   }
 
   @override
@@ -51,10 +46,31 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: FutureBuilder(
-          future: feed.fetch(),
+          future: _future,
           initialData: [],
           builder: (context, snapshot) {
-            return createRegionsListView(context, snapshot);
+            var values = snapshot.data;
+            return values.isEmpty
+                ? Center(child: CircularProgressIndicator())
+                : ListView.builder(
+                    itemCount: values.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      feed.FeedItem item = values[index];
+                      return Dismissible(
+                        direction: DismissDirection.startToEnd,
+                        onDismissed: (direction) {
+                          setState(() {
+                            snapshot.data.removeAt(index);
+                          });
+                          Scaffold.of(context).showSnackBar(SnackBar(
+                              content: Text(item.title + " dismissed")));
+                        },
+                        key: Key(item.title ?? item.description),
+                        child: ItemView(item),
+                        background: Container(color: Colors.grey[200]),
+                      );
+                    },
+                  );
           }),
       drawer: DrawerView(),
     );

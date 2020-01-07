@@ -13,7 +13,7 @@ const List<String> feedList = [
 
 Future<List<FeedItem>> fetch() async {
   //var res = await Future.wait(feedList.map((source) => http.get(source)));
-  var res = [dummy.vueFeed, dummy.coolSheelFeed];
+  var res = [dummy.vueFeed, dummy.coolSheelFeed, dummy.hnFeed];
   return res
       .expand((f) {
         var feed = new RssFeed.parse(f);
