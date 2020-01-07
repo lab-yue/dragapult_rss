@@ -1,7 +1,5 @@
 import 'package:http/http.dart' as http;
 import 'package:webfeed/webfeed.dart';
-//import 'dart:developer' as developer;
-//import 'package:webfeed/webfeed.dart';
 import './dummy.dart' as dummy;
 import './helper.dart' as helper;
 
@@ -14,13 +12,10 @@ const List<String> feedList = [
 Future<List<FeedItem>> fetch() async {
   //var res = await Future.wait(feedList.map((source) => http.get(source)));
   var res = [dummy.vueFeed, dummy.coolSheelFeed, dummy.hnFeed];
-  return res
-      .expand((f) {
-        var feed = new RssFeed.parse(f);
-        return feed.items.map((item) => [feed, item]);
-      })
-      .map((i) => formatRssItem(i[0], i[1]))
-      .toList();
+  return res.expand((f) {
+    var feed = new RssFeed.parse(f);
+    return feed.items.map((item) => formatRssItem(feed, item));
+  }).toList();
 }
 
 String formatRssItemText(String text) {
