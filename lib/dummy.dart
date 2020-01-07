@@ -490,7 +490,7 @@ BSD电子邮件开发者。Unix早期版本中使用 <code>uux</code> 和 <code>
 </table>
 </li>
 <li><strong>John Reiser</strong><br />
-他主要工作是将Unix和C移植到了DEC VAX上，这个机器在学术界相当流行（陈皓注：我在1994年上大学的��候，就是在这个机器上学习的C语言）。这扩大了Unix和C的影响力。</p>
+他主要工作是将Unix和C移植到了DEC VAX上，这个机器在学术界相当流行（陈皓注：我在1994年上大学的����候，就是在这个机器上学习的C语言）。这扩大了Unix和C的影响力。</p>
 <table>
 <tbody>
 <tr>
@@ -678,3 +678,223 @@ BSD 的一个程序员。从他的主页上可以看到他目前在Berkeley大�
 							</item>
 	</channel>
 </rss>""";
+
+var hnFeed = """
+<rss version="2.0">
+  <channel>
+    <title>Hacker News</title>
+    <link>https://news.ycombinator.com/</link>
+    <description>Links for the intellectually curious, ranked by readers.</description>
+    <item>
+      <title>Show HN: Bepis – Crazy Format for HTML+CSS in JavaScript</title>
+      <link>https://github.com/crislin2046/bepis</link>
+      <pubDate>Tue, 7 Jan 2020 02:29:33 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21976195</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21976195">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: KarateClub a Python library for unsupervised machine learning on graphs</title>
+      <link>https://github.com/benedekrozemberczki/karateclub</link>
+      <pubDate>Mon, 6 Jan 2020 11:18:06 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21968257</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21968257">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Scaledger, a double-entry accounting database with a typed GraphQL API</title>
+      <link>https://github.com/affiga/scaledger</link>
+      <pubDate>Mon, 6 Jan 2020 19:11:26 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21972085</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21972085">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Self-taught neural network learns to shoot a target</title>
+      <link>https://github.com/victorqribeiro/bangBangML</link>
+      <pubDate>Sun, 5 Jan 2020 17:15:13 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21962326</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21962326">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: SwiftProcessing – an iOS Swift package for creative coding</title>
+      <link>https://swiftprocessing.org/</link>
+      <pubDate>Tue, 7 Jan 2020 00:08:54 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21975115</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21975115">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Language games – simple games made with word vectors</title>
+      <link>https://github.com/Hellisotherpeople/Language-games</link>
+      <pubDate>Mon, 6 Jan 2020 07:34:59 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21967294</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21967294">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Generating privacy policies for iOS apps from their code</title>
+      <link>https://github.com/privacy-tech-lab/privacyflash-pro</link>
+      <pubDate>Mon, 6 Jan 2020 09:04:58 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21967703</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21967703">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: EvenCart – Next Generation ECommerce Software on ASP.net Core + Liquid</title>
+      <link>https://www.evencart.com</link>
+      <pubDate>Mon, 6 Jan 2020 13:16:09 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21968844</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21968844">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Another “Who Is Hiring” Aggregator: www.whoishiring.work</title>
+      <link>https://news.ycombinator.com/item?id=21973809</link>
+      <pubDate>Mon, 6 Jan 2020 21:54:06 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21973809</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21973809">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Rails PostgreSQL database performance insights. Locks, buffers and more</title>
+      <link>https://github.com/pawurb/rails-pg-extras</link>
+      <pubDate>Mon, 6 Jan 2020 21:02:35 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21973273</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21973273">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: BINTabel – Free Source for Card Bin&#x2F;IIN Meta Data Checker</title>
+      <link>https://owwly.com/product/BIN-card-checker-40/post/Lunching-the-free-service-for-BIN-card-checker-84</link>
+      <pubDate>Mon, 6 Jan 2020 19:16:33 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21972135</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21972135">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Open-source language learning app built with React Native</title>
+      <link>https://github.com/ulangi/ulangi</link>
+      <pubDate>Mon, 6 Jan 2020 19:12:40 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21972093</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21972093">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Terrastruct – A Diagramming Tool for Systems</title>
+      <link>https://terrastruct.com/</link>
+      <pubDate>Sun, 5 Jan 2020 01:35:11 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21958986</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21958986">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: uuidfmt – small CLI utility to formal UUID into the canonical form</title>
+      <link>https://github.com/zshamrock/uuidfmt</link>
+      <pubDate>Mon, 6 Jan 2020 08:22:06 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21967514</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21967514">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Self-Published Book – “Data Science in Production”</title>
+      <link>https://news.ycombinator.com/item?id=21955527</link>
+      <pubDate>Sat, 4 Jan 2020 15:55:31 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21955527</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21955527">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: WeTube. Sync YouTube player across multiple devices</title>
+      <link>https://wetube.glitch.me</link>
+      <pubDate>Mon, 6 Jan 2020 04:02:05 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21966332</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21966332">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Speech to text and synchronized transcript with audio</title>
+      <link>https://voicen.com/en/</link>
+      <pubDate>Mon, 6 Jan 2020 11:22:48 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21968281</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21968281">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Pure C WebRTC implementation for embedded devices</title>
+      <link>https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-c</link>
+      <pubDate>Sat, 4 Jan 2020 00:05:32 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21951692</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21951692">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Scripts to Configure Firefox Profiles</title>
+      <link>https://github.com/poghahm/firefox-legacy-user-profile-customizations</link>
+      <pubDate>Mon, 6 Jan 2020 05:25:14 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21966703</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21966703">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Set with Friends – A Real-Time multiplayer online card game</title>
+      <link>https://setwithfriends.com/</link>
+      <pubDate>Sat, 4 Jan 2020 21:48:37 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21957819</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21957819">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: A library for headless authentication to ETrade</title>
+      <link>https://github.com/VictorioBerra/etrade-token-fetcher-cli</link>
+      <pubDate>Sun, 5 Jan 2020 20:43:51 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21963941</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21963941">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: CLI tool to find synonyms in 14 diff languages from the terminal</title>
+      <link>https://github.com/smallwat3r/synonym</link>
+      <pubDate>Sun, 5 Jan 2020 16:02:14 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21961831</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21961831">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Prray – “Promisified” Array for JavaScript&#x2F;TypeScript</title>
+      <link>https://github.com/Bin-Huang/prray</link>
+      <pubDate>Mon, 6 Jan 2020 05:22:59 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21966684</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21966684">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Fast Service Proxy and Tunnel for HTTP (L7) and TCP (L4) Written in Go</title>
+      <link>https://github.com/inlets/inletsctl</link>
+      <pubDate>Mon, 6 Jan 2020 09:41:42 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21967864</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21967864">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: I combined Milligram, Skeleton, and Normalize into a single CSS project</title>
+      <link>https://sscaffold-css.com/</link>
+      <pubDate>Fri, 3 Jan 2020 18:00:37 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21948472</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21948472">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Build your own ridesharing, gig, on-demand apps Firebase and HyperTrack</title>
+      <link>https://github.com/hypertrack/ridesharing-android</link>
+      <pubDate>Fri, 3 Jan 2020 18:21:44 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21948716</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21948716">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Duktape-eval – a eval library built on Duktape and WebAssembly</title>
+      <link>https://github.com/maple3142/duktape-eval</link>
+      <pubDate>Fri, 3 Jan 2020 15:18:11 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21946565</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21946565">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Neural networks tutorial series with code</title>
+      <link>https://github.com/gokadin/ai-simplest-network</link>
+      <pubDate>Fri, 3 Jan 2020 23:32:35 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21951467</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21951467">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Wonkavision – Screenprinting a Movie Scene</title>
+      <link>https://github.com/RCHowell/Wonkavision</link>
+      <pubDate>Sun, 5 Jan 2020 22:21:28 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21964568</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21964568">Comments</a>]]></description>
+    </item>
+    <item>
+      <title>Show HN: Self-Published Book – “A Pocket Guide to CCPA” for Web Developers</title>
+      <link>https://news.ycombinator.com/item?id=21963781</link>
+      <pubDate>Sun, 5 Jan 2020 20:22:38 +0000</pubDate>
+      <comments>https://news.ycombinator.com/item?id=21963781</comments>
+      <description><![CDATA[<a href="https://news.ycombinator.com/item?id=21963781">Comments</a>]]></description>
+    </item>
+  </channel>
+</rss>
+""";

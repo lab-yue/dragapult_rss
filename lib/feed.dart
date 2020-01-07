@@ -6,15 +6,21 @@ import './dummy.dart' as dummy;
 import './helper.dart' as helper;
 
 const List<String> feedList = [
-  'https://news.vuejs.org/feed.xml',
-  'https://coolshell.cn/feed'
+  'https://news.ycombinator.com/rss',
+  //'https://news.vuejs.org/feed.xml',
+  //'https://coolshell.cn/feed'
 ];
 
 Future<List<FeedItem>> fetch() async {
-  var res = await Future.wait(feedList.map((source) => http.get(source)));
-  //var res = [dummy.vueFeed, dummy.coolSheelFeed];
-  var rssFeed = res.expand((f) => (new RssFeed.parse(f.body).items));
-  return rssFeed.map(formatRssItem).toList();
+  //var res = await Future.wait(feedList.map((source) => http.get(source)));
+  var res = [dummy.vueFeed, dummy.coolSheelFeed];
+  return res
+      .expand((f) {
+        var feed = new RssFeed.parse(f);
+        return feed.items.map((item) => [feed, item]);
+      })
+      .map((i) => formatRssItem(i[0], i[1]))
+      .toList();
 }
 
 String formatRssItemText(String text) {
@@ -25,23 +31,25 @@ String formatRssItemText(String text) {
   return text;
 }
 
-FeedItem formatRssItem(RssItem item) {
+FeedItem formatRssItem(RssFeed feed, RssItem item) {
   DateTime pubDate;
   try {
     pubDate = DateTime.parse(item.pubDate ?? "");
   } on FormatException catch (e) {}
   ;
   return FeedItem(
-      item.title, // tile
-      formatRssItemText(item.description ?? ""), // description
-      item.link, // link
-      pubDate // date
-      );
+    feed.title ?? "",
+    item.title, // tile
+    formatRssItemText(item.description ?? ""), // description
+    item.link, // link
+    pubDate, // date
+  );
 }
 
 class FeedItem {
-  String title, description, link;
+  String feedTitle, title, description, link;
   DateTime pubDate;
 
-  FeedItem(this.title, this.description, this.link, [this.pubDate]);
+  FeedItem(this.feedTitle, this.title, this.description, this.link,
+      [this.pubDate]);
 }
