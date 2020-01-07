@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),
-      home: MyHomePage(title: 'Dragapult rss'),
+      home: MyHomePage(title: 'Dragapult RSS'),
     );
   }
 }
@@ -31,14 +31,14 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Widget createRegionsListView(context, snapshot) {
     var values = snapshot.data;
-    return ListView.builder(
-      itemCount: values.length,
-      itemBuilder: (BuildContext context, int index) {
-        return values.isNotEmpty
-            ? ItemView(values[index])
-            : CircularProgressIndicator();
-      },
-    );
+    return values.isNotEmpty
+        ? ListView.builder(
+            itemCount: values.length,
+            itemBuilder: (BuildContext context, int index) {
+              return ItemView(values[index]);
+            },
+          )
+        : CircularProgressIndicator();
   }
 
   @override
