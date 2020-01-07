@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './feed.dart' as feed;
 import './itemView.dart';
+import './drawer.dart';
 
 void main() => runApp(MaterialApp(
       home: MyApp(),
@@ -55,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           builder: (context, snapshot) {
             return createRegionsListView(context, snapshot);
           }),
+      drawer: DrawerView(),
     );
   }
 }
