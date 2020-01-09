@@ -20,8 +20,12 @@ class DrawerView extends StatelessWidget {
             title: new Text("Read"),
             onTap: () {
               Navigator.pop(context);
-              //  Navigator.push(context,
-              //      new MaterialPageRoute(builder: (context) => new HomePage()));
+            },
+          ),
+          new ListTile(
+            title: new Text("Star"),
+            onTap: () {
+              Navigator.pop(context);
             },
           ),
         ],
