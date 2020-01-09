@@ -1,4 +1,4 @@
-package com.example.rss_client_flutter
+package com.example.dragapult_rss
 
 import android.os.Bundle
 

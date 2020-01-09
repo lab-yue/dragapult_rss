@@ -1,4 +1,4 @@
-# rss_client_flutter
+# dragapult_rss
 
 A new Flutter project.
 
